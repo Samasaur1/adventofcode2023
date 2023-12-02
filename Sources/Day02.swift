@@ -44,4 +44,14 @@ struct Day02: AdventDay {
     // calibrationValues
     legalGames.reduce(0, +)
   }
+
+  var powers: [Int] {
+    mins.map {
+      $0.red * $0.green * $0.blue
+    }
+  }
+
+  func part2() -> Any {
+    powers.reduce(0, +)
+  }
 }
